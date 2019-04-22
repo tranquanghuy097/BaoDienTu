@@ -13,7 +13,11 @@ app.get('/', function (req, res) {
 })
 
 app.get('/signin', function(req, res) {
-    res.render('signin');
+    res.render('signin'), {signIn: true};
+})
+
+app.get('/signup', function(req, res) {
+    res.render('signup');
 })
  
 app.listen(3000, function(){
