@@ -3,4 +3,10 @@
     height: 500px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 5px;
+}
+
+.d-block{
+    width: 500px;
+    height: 500px;
 }
