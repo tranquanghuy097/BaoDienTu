@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/signin', function(req, res) {
-    res.render('signin'), {signIn: true};
+    res.render('signin', {signIn: true});
 })
 
 app.get('/signup', function(req, res) {
