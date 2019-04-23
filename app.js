@@ -21,6 +21,18 @@ app.get('/signin', function(req, res) {
 app.get('/signup', function(req, res) {
     res.render('signup');
 })
+
+app.get('/news1', function(req, res){
+    res.render('news1', {
+        title: 'California officers apparently shoot each other while confronting suspect, police say',
+        author: 'Tran Quang Huy',
+        date: "12/4/1999",
+        category: 'Crime',
+        url: '#',
+        source: 'images/1.jpg',
+        content: 'Two California police officers were injured on Saturday after seemingly aiming and firing at a suspect but instead hitting themselves, officials said\n' 
+        });
+})
  
 app.listen(3000, function(){
     console.log('service http://localhost:3000/ running')
