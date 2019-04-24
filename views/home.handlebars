@@ -31,3 +31,69 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<div id = "special">
+  <div class = "mostread">
+    <h3>Most read</h3>
+    <a href = "#" class = "item">
+      <img src="images/1.jpg" class = "thumbnails">
+      <div class = "title">
+        <p>Title</p>
+        <p>Category</p>
+        <p>Date</p>
+      </div>
+    </a>
+    {{#list item}}
+      <a href = {{url}} class = "item">
+        <img src={{source}} class = "thumbnails">
+        <div class = "title">
+          <p>{{title}}</p>
+          <p class = 'tag'>{{category}}</p>
+          <p>{{date}}</p>
+        </div>
+      </a>
+    {{/list}}
+  </div>
+  <div class = "newest">
+    <h3>Newest</h3>
+    <a href = "#" class = "item" >
+      <img src="images/1.jpg" class = "thumbnails">
+      <div class = "title">
+        <p>Title</p>
+        <p>Category</p>
+        <p>Date</p>
+      </div>
+    </a>
+    {{#list item}}
+      <a href = {{url}} class = "item">
+        <img src={{source}} class = "thumbnails">
+        <div class = "title">
+          <p>{{title}}</p>
+          <p class = 'tag'>{{category}}</p>
+          <p>{{date}}</p>
+        </div>
+      </a>
+    {{/list}}
+  </div>
+  <div class = "categorynewest" >
+    <h3>Newest by Category</h3>
+    <a href = "#" class = "item" >
+      <img src="images/1.jpg" class = "thumbnails">
+      <div class = "title">
+        <p>Title</p>
+        <p>Category</p>
+        <p>Date</p>
+      </div>
+    </a>
+    {{#list item}}
+      <a href = {{url}} class = "item">
+        <img src={{source}} class = "thumbnails">
+        <div class = "title">
+          <p>{{title}}</p>
+          <p class = 'tag'>{{category}}</p>
+          <p>{{date}}</p>
+        </div>
+      </a>
+    {{/list}}
+  </div>
+</div>
