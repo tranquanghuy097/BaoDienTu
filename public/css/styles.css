@@ -85,3 +85,7 @@
   font-size: 55px;
   color: red;
 }
+
+.carousel-indicators .active{
+    background-color: #f00;
+}
