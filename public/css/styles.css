@@ -86,6 +86,11 @@
   color: red;
 }
 
+.carousel-indicators
+{
+    background-color: black;
+}
+
 .carousel-indicators .active{
     background-color: #f00;
 }

@@ -27,6 +27,120 @@ app.get('/crime', function(req, res){
     })
 })
 
+app.get('/military', function(req, res){
+    res.render('category', {
+        category: 'Military'
+    })
+})
+
+app.get('/un', function(req, res){
+    res.render('category', {
+        category: 'U.N'
+    })
+})
+
+app.get('/conflicts', function(req, res){
+    res.render('category', {
+        category: 'Conflicts'
+    })
+})
+
+app.get('/executive', function(req, res){
+    res.render('category', {
+        category: 'Executive'
+    })
+})
+
+app.get('/senate', function(req, res){
+    res.render('category', {
+        category: 'Senate'
+    })
+})
+
+app.get('/movies', function(req, res){
+    res.render('category', {
+        category: 'Movies'
+    })
+})
+
+app.get('/tv', function(req, res){
+    res.render('category', {
+        category: 'TV News'
+    })
+})
+
+app.get('/markets', function(req, res){
+    res.render('category', {
+        category: 'Markets'
+    })
+})
+
+app.get('/politics', function(req, res){
+    res.render('category', {
+        category: 'Politics'
+    })
+})
+
+app.get('/food', function(req, res){
+    res.render('category', {
+        category: 'Foods + Drinks'
+    })
+})
+
+app.get('/cars', function(req, res){
+    res.render('category', {
+        category: 'Cars + Trucks'
+    })
+})
+
+app.get('/archaeology', function(req, res){
+    res.render('category', {
+        category: 'Archaeology'
+    })
+})
+
+app.get('/earth', function(req, res){
+    res.render('category', {
+        category: 'Planet Earth'
+    })
+})
+
+app.get('/security', function(req, res){
+    res.render('category', {
+        category: 'Security'
+    })
+})
+
+app.get('/innovation', function(req, res){
+    res.render('category', {
+        category: 'Innovation'
+    })
+})
+
+app.get('/healthy', function(req, res){
+    res.render('category', {
+        category: 'Healthy Living'
+    })
+})
+
+app.get('/medical', function(req, res){
+    res.render('category', {
+        category: 'Medical Research'
+    })
+})
+
+app.get('/shows', function(req, res){
+    res.render('category', {
+        category: 'Shows'
+    })
+})
+
+app.get('/personalities', function(req, res){
+    res.render('category', {
+        category: 'Personalities'
+    })
+})
+
 app.get('/news1', function(req, res){
     res.render('news1', {
         title: 'California officers apparently shoot each other while confronting suspect, police say',
