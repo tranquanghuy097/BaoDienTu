@@ -22,9 +22,7 @@ app.get('/signup', function(req, res) {
 })
 
 app.get('/crime', function(req, res){
-    res.render('category', {
-        category: 'Crime'
-    })
+    res.render('category', context)
 })
 
 app.get('/military', function(req, res){
@@ -159,13 +157,13 @@ var context ={
         source: 'images/1.jpg',
         title: 'Police shooting each other',
         category: 'Crime',
-        date: '12/2/1999'},
+        date: '12/2/1999',},
 
         {url: '/news1',
         source: 'images/1.jpg',
         title: 'Police shooting each other',
         category: 'Crime',
-        date: '12/2/1999'}
+        date: '12/2/1999',}
     ]
 }
 
@@ -176,6 +174,12 @@ Handlebars.registerHelper('list', function(context, options){
         ret = ret + options.fn(context[i]);
     }
 
+    return ret;
+})
+
+Handlebars.registerHelper('news', function(context, options){
+    var ret = '';
+    ret = ret + options.fn(context[0]);
     return ret;
 })
  

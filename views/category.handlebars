@@ -1,1 +1,11 @@
 <h1>{{category}}</h1>
+ {{#news item}}
+    <a href = "#" id = "Container">
+        <img src = {{source}} id = "image">
+        <div id = "Info">
+            <p>{{title}}</p>
+            <p class = "category">{{category}}</p>
+            <p>{{date}}</p>
+        </div>
+    </a>
+{{/news}}
