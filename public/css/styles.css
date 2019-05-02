@@ -110,3 +110,13 @@
     height: 100%;
     margin-right: 5px;
 }
+
+.form
+{
+    width: 700px ;
+    margin-left: auto ;
+    margin-right: auto ;
+    margin-top: 5px;
+    border: 1px black solid;
+    padding: 5px;
+}
