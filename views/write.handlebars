@@ -1,0 +1,14 @@
+{{#if writer}}
+    <h3 class = "header">Picture here</h3>
+    <button type ="button" id = "pButton">Upload picture</button>
+    <br>
+    <h3 class = "header">Content here</h3>
+    <br>
+    <form method="post">
+        <textarea id="mytextarea"></textarea>
+        <button type ="submit" id = "pButton">Save</button>
+    </form>
+{{else}}
+    <p>You need to be an editor or writer to access this page</p>
+{{/if}}
+

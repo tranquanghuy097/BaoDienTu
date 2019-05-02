@@ -139,6 +139,12 @@ app.get('/personalities', function(req, res){
     })
 })
 
+app.get('/write', function(req, res){
+    res.render('write', {
+        writer: true
+    })
+})
+
 app.get('/news1', function(req, res){
     res.render('news1', {
         title: 'California officers apparently shoot each other while confronting suspect, police say',
