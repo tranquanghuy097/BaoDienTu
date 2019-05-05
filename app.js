@@ -226,13 +226,11 @@ var upload = multer({ storage: storage })
 app.post('/upload/image', upload.single('myfile'), (req, res) => {
     if (!req.file) {
       console.log("No file received");
-      return res.send({
-        success: false
-      });
+      return res.render('write', {notification: "Upload unsuccessful"})
   
     } else {
       console.log('file received');
-      return res.redirect('/write')
+      return res.render('write', {notification: "Upload successful"})
     }
 });
 

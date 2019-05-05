@@ -1,17 +1,14 @@
-{{#if writer}}
-    <h3 class = "header">Picture here</h3>
-    <form action="/upload/image" enctype="multipart/form-data" method="POST"> 
+<h3 class = "header">Picture here</h3>
+<form action="/upload/image" enctype="multipart/form-data" method="POST"> 
         <input type="file" name='myfile' accept="image/*" />
         <input type="submit" value="Upload Photo"/>
-    </form>
-    <br>
-    <h3 class = "header">Content here</h3>
-    <br>
-    <form method="post">
-        <textarea id="mytextarea"></textarea>
-        <button type ="submit" id = "pButton">Save</button>
-    </form>
-{{else}}
-    <p>You need to be an editor or writer to access this page</p>
-{{/if}}
+        <p>{{notification}}</p>
+</form>
+<br>
+<h3 class = "header">Content here</h3>
+<br>
+<form method="post">
+    <textarea id="mytextarea"></textarea>
+    <button type ="submit" id = "pButton">Save</button>
+</form>
 
