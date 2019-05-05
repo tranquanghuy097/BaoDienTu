@@ -145,6 +145,10 @@ app.get('/write', function(req, res){
     })
 })
 
+app.get('/user', function(req, res){
+    res.render('user', context)
+})
+
 app.get('/news1', function(req, res){
     res.render('news1', {
         title: 'California officers apparently shoot each other while confronting suspect, police say',
@@ -158,6 +162,15 @@ app.get('/news1', function(req, res){
 })
 
 var context ={
+    signIn: true,
+    user: [
+        {
+            username: 'richard',
+            email: 'richard@gmail.com',
+            password: '0123',
+            bdate: '1997-04-21',
+        }
+    ],
     item: [
         {url: '/news1',
         source: 'images/1.jpg',
@@ -184,6 +197,12 @@ Handlebars.registerHelper('list', function(context, options){
 })
 
 Handlebars.registerHelper('news', function(context, options){
+    var ret = '';
+    ret = ret + options.fn(context[0]);
+    return ret;
+})
+
+Handlebars.registerHelper('user', function(context, options){
     var ret = '';
     ret = ret + options.fn(context[0]);
     return ret;
