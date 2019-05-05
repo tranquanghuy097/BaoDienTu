@@ -1,3 +1,5 @@
+// Github: https://github.com/tranquanghuy097/BaoDienTu 
+
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var Handlebars = require('handlebars');
@@ -168,7 +170,7 @@ var context ={
             username: 'richard',
             email: 'richard@gmail.com',
             password: '0123',
-            bdate: '1997-04-21',
+            bdate: '1997-04-21',c
         }
     ],
     item: [
