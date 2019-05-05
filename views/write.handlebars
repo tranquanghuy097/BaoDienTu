@@ -1,6 +1,9 @@
 {{#if writer}}
     <h3 class = "header">Picture here</h3>
-    <button type ="button" id = "pButton">Upload picture</button>
+    <form action="/upload/image" enctype="multipart/form-data" method="POST"> 
+        <input type="file" name='myfile' accept="image/*" />
+        <input type="submit" value="Upload Photo"/>
+    </form>
     <br>
     <h3 class = "header">Content here</h3>
     <br>

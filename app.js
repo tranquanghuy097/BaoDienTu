@@ -3,6 +3,8 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var Handlebars = require('handlebars');
+var multer = require('multer');
+var path = require('path');
 
 var app = express();
 
@@ -170,7 +172,7 @@ var context ={
             username: 'richard',
             email: 'richard@gmail.com',
             password: '0123',
-            bdate: '1997-04-21',c
+            bdate: '1997-04-21',
         }
     ],
     item: [
@@ -209,7 +211,34 @@ Handlebars.registerHelper('user', function(context, options){
     ret = ret + options.fn(context[0]);
     return ret;
 })
+
+var storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, 'public/images')
+    },
+    filename: (req, file, cb) => {
+      cb(null, Date.now() +  path.extname(file.originalname))
+    }
+});
+
+var upload = multer({ storage: storage })
+
+app.post('/upload/image', upload.single('myfile'), (req, res) => {
+    if (!req.file) {
+      console.log("No file received");
+      return res.send({
+        success: false
+      });
+  
+    } else {
+      console.log('file received');
+      return res.redirect('/write')
+    }
+});
+
+var upload = multer({storage: storage});
  
 app.listen(3000, function(){
     console.log('service http://localhost:3000/ running')
 })
+
